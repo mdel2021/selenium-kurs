@@ -26,7 +26,7 @@ public class ExplicitWaitTests {
         assertTrue(checkbox.isDisplayed());
         assertFalse(checkbox.isSelected());
 
-        WebElement removeOrAddButton = driver.findElement(By.id("btn"));
+        WebElement removeOrAddButton = driver.findElement(By.cssSelector("[onclick='swapCheckbox()']"));
         removeOrAddButton.click();
 
         WaitUntil waitUntil = new WaitUntil(driver);
